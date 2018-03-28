@@ -25,7 +25,6 @@ sw.os.linux | test
 sw.os.aix | test
 sw.os.osx| test
 sw.os.windows| test
- | 
 sw.os.rhel.6 | tbd
 sw.os.rhel.7 | tbd
 sw.os.ubuntu.14 | tbd
