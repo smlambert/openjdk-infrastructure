@@ -3,88 +3,9 @@
 
 ## The Schema Tree
 
-```mermaid
-
-graph TD;
-
-hw-->arch;
-
-arch-->s390x;
-
-arch-->x86;
-
-arch-->ppc;
-
-hw-->endian;
-
-endian-->le;
-
-hw-->bits;
-
-bits-->32;
-
-sw-->os;
-
-os-->linux;
-
-os-->rhel;
-
-rhel-->6;
-
-rhel-->7;
-
-os-->ubuntu;
-
-ubuntu-->14;
-
-ubuntu-->16;
-
-os-->sles;
-
-sles-->11;
-
-sles-->12;
-
-os-->osx;
-
-os-->windows;
-
-windows-->8;
-
-windows-->10;
-
-os-->zos;
-
-zos-->1_13;
-
-zos-->2_0;
-
-sw-->tool;
-
-tool-->docker;
-
-ci-->role;
-
-role-->build;
-
-role-->test;
-
-test-->jck;
-
-ci-->sponsor;
-
-sponsor-->ibm;
-
-sponsor-->ljc;
-
-sponsor-->joyent;
+![Schema tree](schemaTree.jpg)
 
   
-
-```
-
-  
-
 ## Actual Labels and Consumers
 
 If we work on the principle that we only add a label if the build and test automation scripts require it in order to differentiate a machine, then the list is fairly small.
