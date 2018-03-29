@@ -3,7 +3,7 @@
 
 ## The Schema Tree
 
-![Schema tree](schemaTree.jpg)
+![Schema tree](nodeLabelSchema.svg)
 
   
 ## Actual Labels and Consumers
