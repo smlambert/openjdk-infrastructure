@@ -1,0 +1,17 @@
+---
+#########################################################
+# Setup Prereqs for Test Results Summary Service (TRSS) #
+# install forever-service                               #
+#########################################################
+
+   - name: "Install forever (to run Node.js TRSS app)."
+      npm: name=forever global=yes state=present
+    
+    - name: "Check list of Node.js apps running."
+      command: forever list
+      register: forever_list
+      changed_when: false
+
+    - name: "Start example Node.js TRSS app."
+      command: forever start /path/to/app.js
+      when: "forever_list.stdout.find('/path/to/app.js') == -1"
